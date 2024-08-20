@@ -221,7 +221,7 @@ const BookingForm = ({ isOpen, onClose }) => {
                     </NumberInput>
                     <FormErrorMessage>{errors.guests}</FormErrorMessage>
                   </FormControl>
-                  <FormControl isInvalid={!!errors.date} onChange={() => validateInput('date')} onBlurCapture={() => validateInput('date')}>
+                  <FormControl isInvalid={!!errors.date} onBlurCapture={() => validateInput('date')}>
                     <FormLabel htmlFor="date">Date</FormLabel>
                     <Input
                       type="date"

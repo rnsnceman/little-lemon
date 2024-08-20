@@ -8,7 +8,7 @@ const Footer = () => {
     const { mobile } = useProps();
 
     return (
-        <>
+        <footer>
             <Box
                 backgroundColor="#495e57"
                 color={"white"}
@@ -69,7 +69,7 @@ const Footer = () => {
                 </Flex>
             </Box>
             <BookingForm isOpen={isOpen} onClose={onClose} />
-        </>
+        </footer>
     );
 }
 

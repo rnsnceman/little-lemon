@@ -11,7 +11,7 @@ const LoadingSpinner = () => (
     width="100vw"
     height="100vh"
   >
-    <img alt="logo" src="/favicon.ico" style={{ width: 100 }} />
+    <img alt="logo" src="favicon.ico" style={{ width: 100 }} />
   </Flex>
 );
 

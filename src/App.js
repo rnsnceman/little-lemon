@@ -12,8 +12,10 @@ function App() {
     <ContextProvider>
     <ChakraProvider>
       <Nav />
-      <Hero />
-      <Specials />
+      <main>
+        <Hero />
+        <Specials />
+      </main>
       <Footer />
     </ChakraProvider>
     </ContextProvider>

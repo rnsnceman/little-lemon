@@ -23,7 +23,7 @@ const Footer = () => {
                         <Stack spacing={6}>
                             <Box>
                                 <Image
-                                    src="/footerlogo.png"
+                                    src="footerlogo.png"
                                     alt="Little Lemon footer logo"
                                     objectFit="cover"
                                     w="136px"

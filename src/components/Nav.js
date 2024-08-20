@@ -95,7 +95,7 @@ const Nav = () => {
                         <nav aria-label="Home">
                             <HStack>
                                 <Image
-                                    src='/assets/logo.png'
+                                    src='assets/logo.png'
                                     alt={'logo'}
                                     width={'200'}
                                     height={'55'}

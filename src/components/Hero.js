@@ -66,7 +66,7 @@ const Hero = () => {
                         right={mobile ? null : 8}
                         top={"56px"}
                         position={mobile ? undefined : "absolute"}
-                        src={'/restaurantfood.jpg'}
+                        src={'restaurantfood.jpg'}
                         alt={'Little Lemon restaurant cuisine'}
                         objectFit={'cover'}
                         width={mobile ? "100%" : 400}

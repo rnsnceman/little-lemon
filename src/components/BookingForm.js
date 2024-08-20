@@ -24,7 +24,6 @@ import { useEffect, useState } from "react";
 import ConfirmModal from "./ConfirmModal";
 import { fetchAPI, submitAPI } from "../api/api";
 import * as Yup from "yup";
-import { validateYupSchema } from "formik";
 
 const BookingForm = ({ isOpen, onClose }) => {
   const confirmationModal = useDisclosure();
@@ -35,7 +34,7 @@ const BookingForm = ({ isOpen, onClose }) => {
     email: "",
     date: "",
     guests: 1,
-    time: "",
+    time: '',
     occasion: "",
   });
   const [errors, setErrors] = useState({});
@@ -64,7 +63,7 @@ const BookingForm = ({ isOpen, onClose }) => {
         }))
       })
       .catch((err) => {
-          setErrors((prevErrors) => ({
+        setErrors((prevErrors) => ({
           ...prevErrors,
           [input]: err.message,
         }));
@@ -75,7 +74,7 @@ const BookingForm = ({ isOpen, onClose }) => {
     setAvailableTimes(loadListOfTimes(currentDate));
     setFormValues((prev) => ({
       ...prev,
-      time: availableTimes[0],
+      time: loadListOfTimes(currentDate)[0],
     }));
   }, []);
 
@@ -172,7 +171,7 @@ const BookingForm = ({ isOpen, onClose }) => {
                   isInvalid={!!errors.email}
                   onChange={() => {
                   const email = formValues['email'];
-                  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex pattern
+                  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
                   if (email === undefined || emailPattern.test(email)) {
                     validateInput('email');
